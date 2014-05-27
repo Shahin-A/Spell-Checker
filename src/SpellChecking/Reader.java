@@ -15,7 +15,7 @@ public class Reader extends TXTReader{
 	}
 
 	@Override
-	public void read(Frequency frequency) {
+	public void read(Dictionary frequency) {
 		try {
 			File f = new File(this.getPath());
 			BufferedReader br = new BufferedReader(new FileReader(f));

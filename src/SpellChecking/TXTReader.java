@@ -16,6 +16,6 @@ public abstract class TXTReader{
 		return path;
 	}
 	
-	public abstract void read(Frequency frequency);
+	public abstract void read(Dictionary frequency);
 	
 }

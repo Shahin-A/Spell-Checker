@@ -9,7 +9,7 @@ public class MainChecker {
 		System.out.println("Starting the Program!");
 		Reader dict = new Reader("data/wordsEn.txt");
 		Reader reader = new Reader("data/big.txt");
-		Frequency frequency = new Frequency();
+		Dictionary frequency = new Dictionary();
 		reader.read(frequency);
 		dict.read(frequency);
 		frequency.print();
