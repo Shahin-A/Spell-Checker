@@ -6,6 +6,12 @@ package SpellChecking;
 public class MainChecker {
 	
 	public static void main(String[] argv){
-		System.out.print("Starting the Program! \n");
+		System.out.println("Starting the Program!");
+		Reader dict = new Reader("data/wordsEn.txt");
+		Reader reader = new Reader("data/big.txt");
+		Frequency frequency = new Frequency();
+		reader.read(frequency);
+		dict.read(frequency);
+		frequency.print();
 	}
 }

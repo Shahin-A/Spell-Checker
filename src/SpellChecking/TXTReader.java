@@ -12,6 +12,10 @@ public abstract class TXTReader{
 		path = p;
 	}
 	
+	public String getPath(){
+		return path;
+	}
+	
 	public abstract void read(Frequency frequency);
 	
 }

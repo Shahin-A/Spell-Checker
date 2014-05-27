@@ -1,6 +1,7 @@
 package SpellChecking;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /*
  * This class keeps track of the count of each English words that it has seen so far.
@@ -31,5 +32,22 @@ public class Frequency{
 	
 	public int getFrequencyOfWord(String word){
 		return f.get(word);
+	}
+	
+	public void print(){
+		for (Map.Entry<String, Integer> entry : f.entrySet())
+		{
+		    System.out.print(entry.getKey() + ": " + entry.getValue()+", ");
+		}
+		 System.out.println("\n "+f.size());
+	}
+	
+	public boolean contains(String w){
+		boolean result = false;
+		if (f.containsKey(w)){
+			result = true;
+			System.out.println(w +": " + f.get(w));
+		}
+		return result;
 	}
 }
