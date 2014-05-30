@@ -2,6 +2,7 @@ package SpellChecking;
 
 import java.util.ArrayList;
 
+
 public class Word{
 	
 	String word;
@@ -35,7 +36,8 @@ public class Word{
 	
 	/*
 	 * This function returns the edit distance between the word and w. 
-	 * This is achieved by dynamic programming
+	 * This is achieved by dynamic programming.
+	 * This can be improved to use less space.
 	 */
 	public int editDistance(String w){
 		int n = word.length(); // length of word
@@ -59,5 +61,29 @@ public class Word{
 			}
 		}
 		return previous[n][m];
+	}
+	
+	/*
+	 * This is a naive way to figure out all the close English words 2 or less edit distance away.
+	 */
+	public ArrayList<String> naiveFindClosestWords(){
+		ArrayList<String> result = new ArrayList<String>();
+		for(String w: dict.getWordList()){
+			if (this.editDistance(w) < 3){
+				result.add(w);
+			}
+		}
+		return result;
+	}
+	
+	public void printClosest(){
+		for (String w: this.FindClosestWords()){
+			System.out.print(w+", ");
+		}
+		System.out.print("\n");
+	}
+
+	private ArrayList<String> FindClosestWords() {
+		return naiveFindClosestWords();
 	}
 }

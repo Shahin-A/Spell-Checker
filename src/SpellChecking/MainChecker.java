@@ -13,7 +13,7 @@ public class MainChecker {
 		reader.read(frequency);
 		dict.read(frequency);
 		frequency.print();
-		Word word1 = new Word("e", frequency);
-		System.out.println(word1.editDistance("hell")+"");
+		Word word1 = new Word("reason", frequency);
+		word1.printClosest();
 	}
 }

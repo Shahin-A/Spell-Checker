@@ -90,4 +90,8 @@ public class Dictionary{
 			return false;
 		}
 	}
+	
+	public ArrayList<String> getWordList(){
+		return wordList;
+	}
 }
