@@ -83,7 +83,7 @@ public class Word{
 		System.out.print("\n");
 	}
 
-	private ArrayList<String> FindClosestWords() {
+	public ArrayList<String> FindClosestWords() {
 		return naiveFindClosestWords();
 	}
 }

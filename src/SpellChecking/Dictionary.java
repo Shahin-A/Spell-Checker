@@ -54,7 +54,6 @@ public class Dictionary{
 		boolean result = false;
 		if (f.containsKey(w)){
 			result = true;
-			System.out.println(w +": " + f.get(w));
 		}
 		return result;
 	}
