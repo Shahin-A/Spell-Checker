@@ -1,4 +1,4 @@
-Spell Checker
+Spell Checker (In Progress)
 =============
 This project is a spell checking implementation in JAVA. Please follow the sources below for complete explanation.
 
